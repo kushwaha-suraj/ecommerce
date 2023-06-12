@@ -1,0 +1,1 @@
+MERCHANT_KEY = 'Jc5EjmVOGMvBr+nOejg2sQ=='
