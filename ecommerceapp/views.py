@@ -74,7 +74,7 @@ def checkout(request):
         oid=str(id)+"ShopyCart"
         param_dict = {
 
-            'MID':keys.MID,
+            'MID':'',
             'ORDER_ID': oid,
             'TXN_AMOUNT': str(amount),
             'CUST_ID': email,
@@ -87,7 +87,7 @@ def checkout(request):
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
         return render(request, 'paytm.html', {'param_dict': param_dict})
 
-    return render(request, 'checkout.html')
+    # return render(request, 'checkout.html')
 
 
 @csrf_exempt
